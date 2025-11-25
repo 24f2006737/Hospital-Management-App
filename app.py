@@ -7,9 +7,9 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-#db.init_app(app)
 
-# Routes
+
+# Route
 @app.route('/')
 def home():
     return "Hospital Management System"
