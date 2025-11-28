@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Hospital Management System{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1 class="display-3 mb-4">🏥 Hospital Management System</h1>
+    <p class="lead mb-5">Efficient healthcare management for patients, doctors, and staff</p>
+    
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-4">
+            <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg w-100 mb-3">
+                🔐 Login
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="{{ url_for('register') }}" class="btn btn-success btn-lg w-100 mb-3">
+                📝 Register as Patient
+            </a>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h3>📅 Book Appointments</h3>
+                <p>Schedule appointments with doctors easily</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h3>📋 Track Treatments</h3>
+                <p>View medical history and prescriptions</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-4 shadow">
+                <h3>👥 Manage Staff</h3>
+                <p>Efficient doctor and patient management</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

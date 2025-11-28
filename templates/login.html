@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+
+{% block title %}Login - Hospital Management System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card shadow">
+            <div class="card-body p-4">
+                <h2 class="text-center mb-4">Login</h2>
+                
+                <form method="POST" action="{{ url_for('login') }}">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="username" 
+                               name="username" 
+                               required 
+                               autofocus>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" 
+                               class="form-control" 
+                               id="password" 
+                               name="password" 
+                               required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                        🔓 Login
+                    </button>
+                </form>
+                
+                <hr>
+                
+                <p class="text-center mb-0">
+                    Don't have an account? 
+                    <a href="{{ url_for('register') }}">Register</a>
+                </p>
+                
+                <p class="text-center mb-0 mt-2">
+                    <a href="{{ url_for('home') }}">← Back to Home</a>
+                </p>
+            </div>
+        </div>
+        
+        <!-- Test Credentials Card -->
+        <div class="card mt-3 bg-light">
+            <div class="card-body">
+                <h6 class="mb-2">🧪 Test Credentials:</h6>
+                <small>
+                    <strong>Admin:</strong> admin / admin123<br>
+                    <strong>Patient:</strong> Register first
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
